@@ -3,18 +3,18 @@ import 'add_class.dart';
 import 'add_student.dart';
 import 'add_subject.dart';
 import 'add_teacher.dart';
-import 'add_class.dart';
-import 'edit_student.dart';
-import 'edit_teacher.dart';
-import 'delete_student.dart';
+import 'Edit_student.dart';
+import 'Edit_teacher.dart';
+import 'Delete_student.dart';
 import 'delete_teacher.dart';
 class ManagerHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<_HomeItem> items = [
-      _HomeItem("Add Classes", Icons.class_, Colors.blueAccent[100]!, () {
+     /* _HomeItem("Add Classes", Icons.class_, Colors.blueAccent[100]!, () {
         Navigator.push(context, MaterialPageRoute(builder: (_) => AddClass()));
       }),
+      */
       _HomeItem("Add Student", Icons.person, Colors.blueAccent[100]!, () {
         Navigator.push(context, MaterialPageRoute(builder: (_) => addStudent()));
       }),
@@ -24,14 +24,19 @@ class ManagerHomePage extends StatelessWidget {
       _HomeItem("Add Subject", Icons.book, Colors.blueAccent[100]!, () {
         Navigator.push(context, MaterialPageRoute(builder: (_) => AddSubject()));
       }),
-      _HomeItem("Delete Student", Icons.delete, Colors.blueAccent[100]!, () {
-        Navigator.push(context, MaterialPageRoute(builder: (_) => DeleteStudent()));
+      _HomeItem("Add Class", Icons.book, Colors.blueAccent[100]!, () {
+        Navigator.push(context, MaterialPageRoute(builder: (_) =>AddClass() ));
       }),
-      _HomeItem("Delete Teacher", Icons.delete, Colors.blueAccent[100]!, () {
+
+      _HomeItem("Delete Student", Icons.delete, Colors.blueAccent[100]!, () {
+        Navigator.push(context, MaterialPageRoute(builder: (_) =>DeleteStudent() ));
+      }),
+     _HomeItem("Delete Teacher", Icons.delete, Colors.blueAccent[100]!, () {
         Navigator.push(context, MaterialPageRoute(builder: (_) => DeleteTeacher()));
       }),
+
       _HomeItem("Edit Teacher", Icons.mode_edit_outline, Colors.blueAccent[100]!, () {
-        Navigator.push(context, MaterialPageRoute(builder: (_) => EditTeacher()));
+        Navigator.push(context, MaterialPageRoute(builder: (_) =>EditTeacher()));
       }),
       _HomeItem("Edit Student", Icons.mode_edit_outline, Colors.blueAccent[100]!, () {
         Navigator.push(context, MaterialPageRoute(builder: (_) => EditStudent()));
@@ -39,7 +44,7 @@ class ManagerHomePage extends StatelessWidget {
     ];
 
     return Scaffold(
-      appBar: AppBar(title: Text("Hello Manager",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold,color: Colors.white),) ,
+      appBar: AppBar(title: Text("Hello Noor",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold,color: Colors.white),) ,
         backgroundColor: Colors.blueAccent,
 
       ),
